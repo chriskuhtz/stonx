@@ -24,9 +24,9 @@ export const alphaVantageApi = createApi({
   reducerPath: "alphaVantageApi",
   baseQuery: fetchBaseQuery({ baseUrl: "https://www.alphavantage.co" }),
   endpoints: (builder) => ({
-    getIntradayData: builder.query<AlphaVantageResponse, void>({
-      query: () =>
-        `query?function=TIME_SERIES_INTRADAY&symbol=IBM&interval=15min&apikey=WDRS1BQVI2NH3EIZ`,
+    getIntradayData: builder.query<AlphaVantageResponse, string>({
+      query: (stonk) =>
+        `query?function=TIME_SERIES_INTRADAY&symbol=${stonk}&interval=15min&apikey=WDRS1BQVI2NH3EIZ`,
     }),
   }),
 });

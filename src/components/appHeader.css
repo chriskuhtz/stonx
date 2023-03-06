@@ -1,0 +1,11 @@
+.appHeader {
+  position: sticky;
+  border: 1px solid black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h2 {
+  margin: 0;
+}

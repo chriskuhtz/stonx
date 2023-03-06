@@ -1,12 +1,12 @@
+import { Outlet } from "react-router-dom";
 import "./App.css";
-import { Header } from "./components/Header/Header";
-import { TableView } from "./components/TableView/TableView";
+import { AppHeader } from "./components/AppHeader";
 
 function App() {
   return (
     <div className="App">
-      <Header />
-      <TableView />
+      <AppHeader />
+      <Outlet />
     </div>
   );
 }
